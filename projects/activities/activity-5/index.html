@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <TITLE>Image Hyperlinks</TITLE>
+
+    <STYLE>
+
+        body {
+            margin: 0px;
+            padding: 40px;
+
+            background-image: url("https://i.pinimg.com/736x/3f/b9/fb/3fb9fbc424672f4d07351aa9b6efb971.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+            font-family: Georgia, serif;
+            color: #8A6A3F;
+            text-align: center;
+        }
+
+        H1 {
+            color: #411900;
+        }
+
+        .about-box {
+            border: 3px dashed pink;
+            border-radius: 20px;
+            padding: 30px;
+            width: 85%;
+            margin: auto;
+
+            background-color: white;
+
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        /* IMAGE STYLE */
+        .link-image {
+            width: 150px;
+            height: 100px;
+            object-fit: contain;
+            margin: 15px;
+
+            /* Smooth animation */
+            transition: transform 0.3s ease;
+        }
+
+        /* IMAGE GETS BIGGER WHEN MOUSE IS ON IT */
+        .link-image:hover {
+            transform: scale(1.2);
+        }
+
+        /* YOUTUBE IMAGE */
+        .youtube-image {
+            width: 110px;
+            height: auto;
+            margin: 15px;
+
+            /* Smooth animation */
+            transition: transform 0.3s ease;
+        }
+
+        /* YOUTUBE GETS BIGGER WHEN MOUSE IS ON IT */
+        .youtube-image:hover {
+            transform: scale(1.2);
+        }
+
+    </STYLE>
+
+</HEAD>
+
+<BODY>
+
+    <DIV class="about-box">
+
+        <H1>Image Hyperlinks</H1>
+
+        <HR color="8A6A3F">
+
+        <P>Click an image to visit the website:</P>
+
+        <!-- GOOGLE -->
+        <A HREF="https://www.google.com" TARGET="_blank">
+            <IMG
+                SRC="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyRvEcq4lE5W_o-wpPVBpRe15YhH3YvkMibunpsC5VitdZ7cw9XGh9B_SF&s=10"
+                class="link-image"
+                ALT="Google">
+        </A>
+
+        <!-- YAHOO -->
+        <A HREF="https://www.yahoo.com" TARGET="_blank">
+            <IMG
+                SRC="https://cdn.creativefabrica.com/2023/02/08/Flower-And-Leaf-Aesthetic-Icon-Graphics-60476834-1.png"
+                class="link-image"
+                ALT="Yahoo">
+        </A>
+
+        <!-- BING -->
+        <A HREF="https://www.bing.com" TARGET="_blank">
+            <IMG
+                SRC="https://cdn.creativefabrica.com/2023/02/08/One-Leaf-Aesthetic-Icon-Graphics-60477374-2-580x387.png"
+                class="link-image"
+                ALT="Bing">
+        </A>
+
+        <!-- YOUTUBE -->
+        <A HREF="https://www.youtube.com" TARGET="_blank">
+            <IMG
+                SRC="https://cdn.creativefabrica.com/2023/02/08/Flower-And-Leaf-Aesthetic-Icon-Graphics-60476834-1.png"
+                class="youtube-image"
+                ALT="YouTube">
+        </A>
+
+        <!-- MICROSOFT -->
+        <A HREF="https://www.microsoft.com" TARGET="_blank">
+            <IMG
+                SRC="https://cdn.creativefabrica.com/2023/02/08/Flower-Design-Icon-Graphics-60470382-1.jpg"
+                class="link-image"
+                ALT="Microsoft">
+        </A>
+
+        <BR>
+        <BR>
+
+        <HR color="8A6A3F">
+
+        <P>Click any image above to open its website.</P>
+
+    </DIV>
+
+</BODY>
+
+</HTML>

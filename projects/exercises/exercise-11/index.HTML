@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <TITLE>Image Hyperlinks</TITLE>
+
+    <STYLE>
+
+        /* =========================
+           PAGE
+           ========================= */
+
+        body {
+            margin: 0px;
+            padding: 40px;
+
+            background-image: url("https://i.pinimg.com/736x/77/f8/54/77f854bc4551b153bc28bd11f9ffffeb.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+            font-family: Georgia, serif;
+            color: #411900;
+            text-align: center;
+
+            opacity: 0;
+            animation: pageFadeIn 1.5s ease forwards;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           PAGE FADE IN
+           ========================= */
+
+        @keyframes pageFadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+        }
+
+
+        /* =========================
+           TITLE
+           ========================= */
+
+        H1 {
+            animation: titleAppear 1.5s ease-out;
+        }
+
+        @keyframes titleAppear {
+
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* =========================
+           IMAGE LINKS
+           ========================= */
+
+        .link-image {
+            width: 150px;
+            height: 100px;
+            object-fit: contain;
+            margin: 15px;
+        }
+
+	.youtube-image {
+    	    width: 110px;
+    	    height: auto;
+    	    margin: 15px;
+	}
+
+
+        /* =========================
+           MARQUEE
+           ========================= */
+
+        marquee {
+            margin-top: 10px;
+        }
+
+        mark {
+            background-color: transparent;
+        }
+
+
+    </STYLE>
+
+</HEAD>
+
+
+<BODY>
+
+    <!-- =========================
+         TITLE
+         ========================= -->
+
+    <H1>Image Hyperlinks</H1>
+
+    <HR color="8A6A3F">
+
+    <BR>
+
+    <P>Click an image to visit the website:</P>
+
+
+    <!-- =========================
+         IMAGE HYPERLINKS
+         ========================= -->
+
+    <A HREF="https://www.google.com" TARGET="_blank">
+        <IMG
+            SRC="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            class="link-image"
+            ALT="Google">
+    </A>
+
+
+    <A HREF="https://www.yahoo.com" TARGET="_blank">
+        <IMG
+            SRC="https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage.png"
+            class="link-image"
+            ALT="Yahoo">
+    </A>
+
+
+    <A HREF="https://www.bing.com" TARGET="_blank">
+        <IMG
+            SRC="https://www.bing.com/sa/simg/favicon-2x.ico"
+            class="link-image"
+            ALT="Bing">
+    </A>
+
+
+    <A HREF="https://www.youtube.com" TARGET="_blank">
+    <IMG
+        SRC="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+        class="youtube-image"
+        ALT="YouTube">
+    </A>
+
+    <A HREF="https://www.microsoft.com" TARGET="_blank">
+        <IMG
+            SRC="https://www.microsoft.com/favicon.ico"
+            class="link-image"
+            ALT="Microsoft">
+    </A>
+
+
+    <!-- =========================
+         DIVIDER
+         ========================= -->
+
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+    <BR>
+
+    <HR color="8A6A3F">
+
+
+    <!-- =========================
+         THANK YOU
+         ========================= -->
+
+    <BR>
+
+    <MARQUEE scrollamount="10">
+
+        <MARK>
+            Thank You~~ 🏃💨
+        </MARK>
+
+    </MARQUEE>
+
+
+</BODY>
+
+</HTML>

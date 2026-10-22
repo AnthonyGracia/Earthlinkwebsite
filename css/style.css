@@ -1,0 +1,832 @@
+
+/* ==========================================================
+   NATURE THEME - FOREST GREEN, SAGE, CREAM, AND EARTHY GOLD
+   ========================================================== */
+
+/* ---------- 1. VARIABLES ---------- */
+:root {
+  --ink: #263d2d;
+  --sea: #5b8052;
+  --sun: #d6ad68;
+  --mist: #f0f3e8;
+  --line: #d6dfcf;
+  --white: #fcfbf5;
+
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Instrument Sans", Arial, sans-serif;
+  --nav-height: 64px;
+}
+
+/* ---------- 2. BASE ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: var(--nav-height);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+a {
+  color: var(--sea);
+  transition: color 0.25s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+.lead {
+  max-width: 60ch;
+  margin-bottom: 2.5rem;
+  color: #647763;
+}
+
+:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--sun);
+  color: var(--ink);
+  font: 600 1rem var(--font-body);
+  border: 2px solid var(--sun);
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #e4c184;
+  border-color: #e4c184;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(38, 61, 45, 0.18);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+}
+
+/* ---------- 3. NAVIGATION ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  box-shadow: 0 3px 12px rgba(20, 40, 25, 0.12);
+}
+
+.navbar {
+  width: min(1000px, 92%);
+  height: var(--nav-height);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font: 700 1.25rem var(--font-heading);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(214, 173, 104, 0.18);
+  color: #f1d8a7;
+}
+
+/* Dropdown menus */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  padding: 0.5rem;
+  background: var(--ink);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+  padding: 0.45rem 0.9rem;
+  font: 600 0.95rem var(--font-body);
+  color: var(--white);
+  background: transparent;
+  border: 2px solid var(--white);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* ---------- 4. HERO SECTION ---------- */
+.hero {
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  background: linear-gradient(
+    135deg,
+    #263d2d 0%,
+    #496e47 55%,
+    #7d9466 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  max-width: 18ch;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 50ch;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  opacity: 0.92;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ---------- 5. SECTIONS AND CARDS ---------- */
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: var(--mist);
+}
+
+.subsection {
+  margin-top: 3.5rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--sea);
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(38, 61, 45, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(38, 61, 45, 0.1);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* ---------- 6. TIMELINE ---------- */
+.timeline {
+  border-left: 3px solid var(--sea);
+  padding-left: 1.5rem;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -2.05rem;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  background: var(--sun);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+}
+
+.timeline strong {
+  font: 700 1.2rem var(--font-heading);
+}
+
+/* ---------- 7. ORGANIZATIONAL CHART ---------- */
+.org-chart {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.org-chart ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  position: relative;
+}
+
+.org-chart > ul {
+  padding-top: 0;
+}
+
+.org-chart li {
+  position: relative;
+  padding: 1.5rem 0.5rem 0;
+  text-align: center;
+}
+
+.org-chart > ul > li {
+  padding-top: 0;
+}
+
+.org-chart li::before,
+.org-chart li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 1.5rem;
+  border-top: 2px solid var(--sea);
+}
+
+.org-chart li::before {
+  right: 50%;
+}
+
+.org-chart li::after {
+  left: 50%;
+  border-left: 2px solid var(--sea);
+}
+
+.org-chart li:only-child::before,
+.org-chart li:only-child::after {
+  display: none;
+}
+
+.org-chart li:first-child::before,
+.org-chart li:last-child::after {
+  border: 0;
+}
+
+.org-chart li:last-child::before {
+  border-right: 2px solid var(--sea);
+  border-radius: 0 6px 0 0;
+}
+
+.org-chart li:first-child::after {
+  border-radius: 6px 0 0 0;
+}
+
+.org-chart ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 1.5rem;
+  border-left: 2px solid var(--sea);
+}
+
+.org-chart > ul > li::before,
+.org-chart > ul > li::after {
+  display: none;
+}
+
+.node {
+  display: inline-block;
+  min-width: 130px;
+  padding: 0.6rem 1rem;
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.node.top {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.node.small {
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-color: var(--sea);
+}
+
+/* ---------- 8. CONTACT FORM ---------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  font: 1rem var(--font-body);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--sea);
+  box-shadow: 0 0 0 3px rgba(91, 128, 82, 0.15);
+}
+
+form .btn {
+  margin-top: 1rem;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-weight: 600;
+  min-height: 1.5rem;
+}
+
+.form-status.error {
+  color: #b3261e;
+}
+
+.form-status.success {
+  color: #1b6e3c;
+}
+
+.contact-list li {
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- 9. FOOTER ---------- */
+.site-footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--white);
+  background: var(--ink);
+}
+
+/* ---------- 10. MOBILE STYLES ---------- */
+@media (max-width: 800px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 0.5rem 4%;
+    background: var(--ink);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .dropdown {
+    display: block;
+    position: static;
+    min-width: 0;
+    padding: 0 0 0 1rem;
+    box-shadow: none;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .org-chart ul {
+    justify-content: flex-start;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+}
+
+/* ---------- 11. PROJECTS AND EXERCISES ---------- */
+.project-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project {
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--sea);
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(38, 61, 45, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(38, 61, 45, 0.09);
+}
+
+.project .tags {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--sea);
+}
+
+.btn-small {
+  padding: 0.45rem 1rem;
+  font-size: 0.95rem;
+}
+
+.code-box {
+  margin-top: 1rem;
+}
+
+.code-box summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--sea);
+}
+
+.code-box pre {
+  margin-top: 0.8rem;
+  padding: 1rem;
+  overflow-x: auto;
+  background: #1f3325;
+  color: #edf3e8;
+  border-radius: 12px;
+  font: 0.9rem/1.5 Consolas, "Courier New", monospace;
+}
+
+/* ---------- 12. PAGE TRANSITION ---------- */
+main {
+  transition: opacity 0.35s ease;
+}
+
+main.is-fading {
+  opacity: 0;
+}
+
+/* ---------- 13. NEXT AND PREVIOUS SLIDER ---------- */
+.is-slider .project {
+  display: none;
+}
+
+.is-slider .project.is-active {
+  display: block;
+  animation: slideFade 0.4s ease;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.slider-controls {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.slider-counter {
+  font-weight: 600;
+}
+
+.slider-controls .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---------- 14. INTRO AND LOGO ANIMATION ---------- */
+.intro {
+  position: fixed;
+  inset: 0;
+  background: #17291d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.intro.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.intro-logo {
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.85);
+  animation: logoIn 1.4s ease forwards;
+}
+
+.intro-text {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  font-weight: 700;
+  color: #f3f3e8;
+  letter-spacing: 0.04em;
+}
+
+.intro-tagline {
+  display: block;
+  margin-top: 0.6rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  color: #c5d5b8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: taglineIn 0.9s ease 0.7s forwards;
+}
+
+@keyframes logoIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes taglineIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- 15. PORTFOLIO PROJECT PREVIEW ---------- */
+
+/* Preview button beside Open project */
+.preview-button {
+  margin-left: 0.5rem;
+}
+
+/* Dark background behind the preview */
+.preview-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(15, 28, 19, 0.82);
+}
+
+.preview-modal.is-open {
+  display: flex;
+}
+
+/* Main preview window */
+.preview-window {
+  display: flex;
+  flex-direction: column;
+  width: min(1100px, 96vw);
+  height: min(850px, 92vh);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Preview title bar */
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.preview-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  overflow-wrap: anywhere;
+}
+
+/* Close button */
+.preview-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  color: var(--white);
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.preview-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Area containing the project website */
+.preview-frame-wrap {
+  flex: 1;
+  min-height: 0;
+  background: #ffffff;
+}
+
+#previewFrame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+}
+
+/* Previous / counter / Next bar */
+.preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--mist);
+  border-top: 1px solid var(--line);
+}
+
+.preview-footer .btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+body.preview-open {
+  overflow: hidden;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .preview-modal {
+    padding: 0.4rem;
+  }
+
+  .preview-window {
+    width: 100%;
+    height: 94vh;
+    border-radius: 12px;
+  }
+
+  .preview-header {
+    padding: 0.7rem;
+  }
+
+  .preview-footer {
+    gap: 0.4rem;
+    padding: 0.7rem;
+  }
+
+  .preview-footer .btn {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  .preview-counter {
+    font-size: 0.85rem;
+  }
+
+  .preview-button {
+    margin: 0.5rem 0 0;
+  }
+}
+
+/* ---------- 16. REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  main {
+    transition: none;
+  }
+
+  .is-slider .project.is-active {
+    animation: none;
+  }
+
+  .btn,
+  .card,
+  .project,
+  .preview-close {
+    transition: none;
+  }
+}
